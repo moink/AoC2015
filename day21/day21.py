@@ -30,7 +30,8 @@ def get_vals(wearing):
 
 def generate_combinations():
     weapons = range(5)
-    armor = itertools.chain(range(5, 10), [17])
+    # armor = itertools.chain(range(5, 10), [17])
+    armor = range(5, 10)
     rings = itertools.chain.from_iterable(
         (itertools.combinations(range(10, 16), n) for n in range(3)))
     for combo in itertools.product(weapons, armor, rings):
